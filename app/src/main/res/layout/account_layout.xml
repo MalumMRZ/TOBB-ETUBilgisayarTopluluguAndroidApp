@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:backgroundTint="#FFFA82"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageBackButton"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFA82"
+            android:src="@drawable/back" />
+
+
+        <TextView
+            android:id="@+id/toolbarDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:text="HESAPLARIMIZ"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFA82"
+            android:src="@drawable/home" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/instagram"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/my_shape_instagram"
+        android:drawableStart="@drawable/instagram"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="Instagram : tobb_siberguvenlik_kulubu
+"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_wordpress"
+        android:drawableStart="@drawable/medium"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="Medium :                                         TOBB ETU Siber Güvenlik Kulübü"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkedin">
+
+    </Button>
+
+    <Button
+        android:id="@+id/linkedin"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_linkedin"
+        android:drawableStart="@drawable/linkedin"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="Linkedin :                                         TOBB ETU Siber Güvenlik Kulübü"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instagram">
+
+    </Button>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

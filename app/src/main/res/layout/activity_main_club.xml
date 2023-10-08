@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/holo_blue_bright"
+        android:backgroundTint="#00BFA5"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/toolbarDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text=" KULÜP "
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#00BFA5"
+            android:src="@drawable/home" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/newsButton"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#82FF96"
+        android:drawableStart="@drawable/medium"
+        android:paddingStart="30dp"
+        android:paddingEnd="35dp"
+        android:text="Yazılarımız"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/activitiesButton"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:drawableStart="@drawable/activity"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#82E1FF"
+        android:text="Etkinliklerimiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsButton" />
+
+    <Button
+        android:id="@+id/videosButton"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:drawableStart="@drawable/videos"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#FFA082"
+        android:text="Videolarımız"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activitiesButton" />
+
+    <Button
+        android:id="@+id/membersButton"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:drawableStart="@drawable/members"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#FC82FF"
+        android:text="Üyelerimiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videosButton" />
+
+    <Button
+        android:id="@+id/accountButton"
+        android:paddingStart="30dp"
+        android:paddingEnd="15dp"
+        android:drawableStart="@drawable/accounts"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#FFFA82"
+        android:text="Hesaplarımız"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/membersButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <!-- ShowIn ise yaptığımız menünün bir navigation view içerisinde olmasını gerektiğini ve görünümün ona göre ayarlanması gerektiğini söyler. -->
+    <!-- checkable Behaviour bize buradaki nesnelerin sadece 1 tanesinin seçilebileceğini vurgular -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mainScreen"
+            android:title="Ana Ekran" />
+        <item
+            android:id="@+id/nav_ourPlans"
+            android:title="Proje-Etkinlik Planlarımız" />
+        <item
+            android:id="@+id/nav_ourMembers"
+            android:title="Üyelerimiz" />
+        <item android:id="@+id/admin_panel"
+            android:title="Admin Paneli"/>
+
+    </group>
+
+    <item android:title="Bize Ulaşın">
+        <menu>
+            <item
+                android:id="@+id/nav_feedBack"
+                android:title="Geri Bildirim" />
+            <item
+                android:id="@+id/nav_shareUs"
+                android:title="Bizi paylaşın" />
+            <item android:id="@+id/nav_followUs"
+                android:title="Bizi Takip Edin"/>
+        </menu>
+    </item>
+
+</menu>

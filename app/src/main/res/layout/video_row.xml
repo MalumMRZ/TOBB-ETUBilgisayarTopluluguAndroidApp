@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:background="#E4FFC7"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/video_thumbnail" />
+
+    <TextView
+        android:id="@+id/videoRowTextView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="RandsomwareNedir?"/>
+
+    <ImageButton
+        android:id="@+id/videoRowImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram"
+        android:background="@drawable/my_shape_instagram"/>
+
+
+
+
+
+</LinearLayout>

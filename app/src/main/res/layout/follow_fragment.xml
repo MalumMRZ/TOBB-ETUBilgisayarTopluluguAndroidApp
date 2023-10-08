@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#93ED8A">
+
+
+    <Button
+        android:id="@+id/instagram"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/my_shape_instagram"
+        android:drawableStart="@drawable/instagram"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="tobb_bilgisayar_toplulugu"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/telegram"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_wordpress"
+        android:drawableStart="@drawable/wordpress"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="TOBB ETU CS COMMUNITY - RESOURCES"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+    </Button>
+
+    <Button
+        android:id="@+id/email"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_email"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:paddingStart="30dp"
+        android:paddingRight="0dp"
+        android:text="tobb.bilgisayar.toplulugu@gmail.com"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube">
+
+    </Button>
+
+    <Button
+        android:id="@+id/linkedin"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_linkedin"
+        android:drawableStart="@drawable/linkedin"
+        android:paddingStart="35dp"
+        android:paddingRight="0dp"
+        android:text="TOBB ETU Bilgisayar Topluluğu"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instagram">
+
+    </Button>
+
+    <Button
+        android:id="@+id/youtube"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/my_shape_youtube"
+        android:drawableStart="@drawable/youtube"
+        android:paddingStart="35dp"
+        android:paddingRight="45dp"
+        android:text="TOBB ETU Bilgisayar Topluluğu"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkedin">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

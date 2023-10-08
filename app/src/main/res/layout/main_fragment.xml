@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:id="@+id/website"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#F49797"
+            android:paddingStart="35dp"
+            android:paddingRight="0dp"
+            android:text="Web Sayfamız"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/github"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#80BDB6"
+            android:paddingStart="35dp"
+            android:paddingRight="0dp"
+            android:text="Github Hesabımız"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/website">
+
+        </Button>
+
+        <Button
+            android:id="@+id/gameDevClub"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#FF8A80"
+            android:paddingStart="35dp"
+            android:paddingRight="0dp"
+            android:text="Oyun Geliştirme Kulübü"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aiClub">
+
+        </Button>
+
+        <Button
+            android:id="@+id/appDevClub"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#F4E097"
+            android:paddingStart="35dp"
+            android:paddingRight="0dp"
+            android:text="Uygulama Geliştirme Kulübü"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameDevClub">
+
+        </Button>
+
+        <Button
+            android:id="@+id/aiClub"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#D2E3B9"
+            android:paddingStart="30dp"
+            android:paddingRight="0dp"
+            android:text="Yapay Zeka Kulübü"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blockChainClub">
+
+        </Button>
+
+        <Button
+            android:id="@+id/cyberSecClub"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#9693F6"
+            android:paddingStart="35dp"
+            android:paddingRight="0dp"
+            android:text="Siber Güvenlik Kulübü"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appDevClub">
+
+        </Button>
+
+        <Button
+            android:id="@+id/blockChainClub"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/classic_button"
+            android:backgroundTint="#F1B0F6"
+            android:paddingStart="35dp"
+            android:paddingRight="45dp"
+            android:text="BlockChain Kulubü"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/github">
+
+        </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
