@@ -1,8 +1,10 @@
 package com.yusufmirza.etubilgisayartopluluk.HelperClasses;
 
+import com.yusufmirza.etubilgisayartopluluk.Helper;
+
 import java.io.Serializable;
 
-public class Member implements Serializable {
+public class Member implements Serializable, Helper {
 
     String name;
     String info;

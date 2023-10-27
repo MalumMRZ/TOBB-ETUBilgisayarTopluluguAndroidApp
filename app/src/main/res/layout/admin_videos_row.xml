@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/videosNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/videosEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/videosNameText"
+        app:layout_constraintStart_toEndOf="@+id/videosNameText"
+        app:layout_constraintTop_toTopOf="@+id/videosNameText"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
+    <ImageView
+        android:id="@+id/videosDeleteButton"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/videosEditButton"
+        app:layout_constraintStart_toEndOf="@+id/videosEditButton"
+        app:layout_constraintTop_toTopOf="@+id/videosEditButton"
+        app:srcCompat="@drawable/baseline_delete_24" />
+
+    <ImageButton
+        android:id="@+id/imageAccountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/videosDeleteButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/insta" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

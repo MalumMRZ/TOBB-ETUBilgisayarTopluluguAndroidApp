@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/membersNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/membersEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/membersNameText"
+        app:layout_constraintStart_toEndOf="@+id/membersNameText"
+        app:layout_constraintTop_toTopOf="@+id/membersNameText"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
+    <ImageView
+        android:id="@+id/membersDeleteButton"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/membersEditButton"
+        app:layout_constraintStart_toEndOf="@+id/membersEditButton"
+        app:layout_constraintTop_toTopOf="@+id/membersEditButton"
+        app:srcCompat="@drawable/baseline_delete_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

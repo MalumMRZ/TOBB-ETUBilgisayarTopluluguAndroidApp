@@ -16,6 +16,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
+import com.yusufmirza.etubilgisayartopluluk.MainActivity;
+import com.yusufmirza.etubilgisayartopluluk.adminpanel.AdminClubActivities;
 import com.yusufmirza.etubilgisayartopluluk.databinding.AdminNewsEditBinding;
 
 import org.checkerframework.common.aliasing.qual.Unique;
@@ -41,7 +43,45 @@ public class AdminNewsEdit extends AppCompatActivity {
         type = getIntent().getStringExtra("type");
         subMap = getIntent().getStringExtra("subMap");
 
+        switch (keyWord){
 
+            case "BlokZincir":
+                adminNewsEditBinding.toolbarDetailText.setText("Blok Zincir-Haberler");
+                break;
+
+            case "YapayZeka":
+                adminNewsEditBinding.toolbarDetailText.setText("Yapay Zeka-Haberler");
+                break;
+
+            case "OyunGelistirme":
+                adminNewsEditBinding.toolbarDetailText.setText("Oyun Geliştirme-Haberler");
+                break;
+
+            case "UygulamaGelistirme":
+                adminNewsEditBinding.toolbarDetailText.setText("Uygulama Geliştirme-Haberler");
+                break;
+
+            case "SiberGuvenlik":
+                adminNewsEditBinding.toolbarDetailText.setText("Siber Güvenlik-Haberler");
+                break;
+
+        }
+
+        adminNewsEditBinding.imageBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        adminNewsEditBinding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminNewsEdit.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         if (subMap!=null){
 
@@ -81,7 +121,7 @@ public class AdminNewsEdit extends AppCompatActivity {
            @Override
            public void onClick(View view) {
 
-               adminNewsEditBinding.addNewNews.setEnabled(false);
+
 
                String name = adminNewsEditBinding.adminNewsName.getText().toString().trim();
                String link = adminNewsEditBinding.adminNewsLink.getText().toString().trim();
@@ -99,7 +139,7 @@ public class AdminNewsEdit extends AppCompatActivity {
 
 
 
-               if (!name.equals("") && !name.equals("")) {
+               if (!name.equals("") && !link.equals("")) {
 
                    HashMap<String, Object> myHash = new HashMap<>();
                    myHash.put("name",name);
@@ -111,6 +151,7 @@ public class AdminNewsEdit extends AppCompatActivity {
                    documentReference.update("new_list."+uniqueStr,myHash).addOnSuccessListener(new OnSuccessListener<Void>() {
                        @Override
                        public void onSuccess(Void unused) {
+                           adminNewsEditBinding.addNewNews.setEnabled(false);
                            Toast.makeText(AdminNewsEdit.this, "Başarılı bir şekilde eklendi", Toast.LENGTH_SHORT).show();
                            Intent intent = new Intent(AdminNewsEdit.this,AdminMainNews.class);
                            intent.putExtra("key",keyWord);
@@ -122,6 +163,7 @@ public class AdminNewsEdit extends AppCompatActivity {
                    }).addOnFailureListener(new OnFailureListener() {
                        @Override
                        public void onFailure(@NonNull Exception e) {
+                           adminNewsEditBinding.addNewNews.setEnabled(false);
                            Toast.makeText(AdminNewsEdit.this, "Ekleme başarısız oldu", Toast.LENGTH_SHORT).show();
                            Intent intent = new Intent(AdminNewsEdit.this,AdminMainNews.class);
                            intent.putExtra("key",keyWord);
@@ -131,6 +173,10 @@ public class AdminNewsEdit extends AppCompatActivity {
                        }
                    });
 
+
+               } else {
+
+                   Toast.makeText(AdminNewsEdit.this, "Boşlukları doldurun", Toast.LENGTH_SHORT).show();
 
                }
            }

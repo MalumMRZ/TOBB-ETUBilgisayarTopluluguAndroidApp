@@ -18,7 +18,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.yusufmirza.etubilgisayartopluluk.Adapters.MemberAdapter;
+import com.yusufmirza.etubilgisayartopluluk.ArrayListSorter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.MemberAdapterRecyclerView;
+import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.NewsClass;
 import com.yusufmirza.etubilgisayartopluluk.HelperClasses.Member;
 import com.yusufmirza.etubilgisayartopluluk.MainActivity;
 import com.yusufmirza.etubilgisayartopluluk.R;
@@ -95,9 +97,18 @@ public class MembersActivity extends AppCompatActivity {
 
                     }
 
+                    if (memberList.size() > 0){
+                        ArrayListSorter<Member> newsClassArrayListSorter = new ArrayListSorter<>();
+                        ArrayList<Member> adapterClasses = newsClassArrayListSorter.sortedArray(memberList);
 
-                    memberLayoutBinding.memberRecyclerView.setAdapter(new MemberAdapterRecyclerView(memberList));
-                    memberLayoutBinding.memberRecyclerView.setLayoutManager(new LinearLayoutManager(MembersActivity.this));
+                        memberLayoutBinding.memberRecyclerView.setAdapter(new MemberAdapterRecyclerView(adapterClasses));
+                        memberLayoutBinding.memberRecyclerView.setLayoutManager(new LinearLayoutManager(MembersActivity.this));
+                    } else {
+                        Toast.makeText(MembersActivity.this, "Bu kulubümünüz henüz üyelerini girmemiş", Toast.LENGTH_SHORT).show();
+                    }
+
+
+
 
 
                 }

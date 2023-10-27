@@ -1,8 +1,10 @@
 package com.yusufmirza.etubilgisayartopluluk.adminpanel.newspanel;
 
+import com.yusufmirza.etubilgisayartopluluk.Helper;
+
 import java.io.Serializable;
 
-public class AdminNewsHelper implements Serializable {
+public class AdminNewsHelper implements Serializable, Helper {
 
      private String name;
     private  String link;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/activitiesNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activitiesEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activitiesNameText"
+        app:layout_constraintStart_toEndOf="@+id/activitiesNameText"
+        app:layout_constraintTop_toTopOf="@+id/activitiesNameText"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
+    <ImageView
+        android:id="@+id/activitiesDeleteButton"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activitiesEditButton"
+        app:layout_constraintStart_toEndOf="@+id/activitiesEditButton"
+        app:layout_constraintTop_toTopOf="@+id/activitiesEditButton"
+        app:srcCompat="@drawable/baseline_delete_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</HorizontalScrollView>

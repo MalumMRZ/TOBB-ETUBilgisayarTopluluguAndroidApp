@@ -3,17 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:fontFamily="monospace"
-        android:text="YAKINDA GELECEK"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/pastActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Etkinlikler" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/futureActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gelecek Etkinlikler" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/pastProjects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş Projeler" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/futureProjects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gelecek Projeler" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

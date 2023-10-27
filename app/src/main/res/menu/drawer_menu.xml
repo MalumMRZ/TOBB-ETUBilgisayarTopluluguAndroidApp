@@ -15,6 +15,10 @@
         <item
             android:id="@+id/nav_ourMembers"
             android:title="Üyelerimiz" />
+
+        <item android:id="@+id/open_account"
+            android:title="Kayıt-Giriş"/>
+
         <item android:id="@+id/admin_panel"
             android:title="Admin Paneli"/>
 

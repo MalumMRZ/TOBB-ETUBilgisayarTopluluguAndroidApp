@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1030780288351",
+    "project_id": "etubilgisayartoplulugu",
+    "storage_bucket": "etubilgisayartoplulugu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030780288351:android:223dbcc707292d22f90aea",
+        "android_client_info": {
+          "package_name": "com.yusufmirza.etubilgisayartopluluk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqRR2Vvkbzr2pwQ_BEBY9ukd-6IPc5vOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

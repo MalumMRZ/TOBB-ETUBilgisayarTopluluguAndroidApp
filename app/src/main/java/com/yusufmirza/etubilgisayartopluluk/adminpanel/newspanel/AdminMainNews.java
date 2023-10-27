@@ -18,9 +18,12 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.yusufmirza.etubilgisayartopluluk.ArrayListSorter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.activities.NewsActivity;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.RecNewsViewAdapter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.NewsClass;
+import com.yusufmirza.etubilgisayartopluluk.MainActivity;
+import com.yusufmirza.etubilgisayartopluluk.adminpanel.AdminClubActivities;
 import com.yusufmirza.etubilgisayartopluluk.databinding.AdminClubActivitiesBinding;
 import com.yusufmirza.etubilgisayartopluluk.databinding.AdminMainNewsBinding;
 
@@ -48,6 +51,46 @@ public class AdminMainNews extends AppCompatActivity {
 
          keyWord = getIntent().getStringExtra("key");
          type = getIntent().getStringExtra("type");
+
+        switch (keyWord){
+
+            case "BlokZincir":
+                adminMainNewsBinding.toolbarDetailText.setText("Blok Zincir-Haberler");
+                break;
+
+            case "YapayZeka":
+                adminMainNewsBinding.toolbarDetailText.setText("Yapay Zeka-Haberler");
+                break;
+
+            case "OyunGelistirme":
+                adminMainNewsBinding.toolbarDetailText.setText("Oyun Geliştirme-Haberler");
+                break;
+
+            case "UygulamaGelistirme":
+                adminMainNewsBinding.toolbarDetailText.setText("Uygulama Geliştirme-Haberler");
+                break;
+
+            case "SiberGuvenlik":
+                adminMainNewsBinding.toolbarDetailText.setText("Siber Güvenlik-Haberler");
+                break;
+
+        }
+
+        adminMainNewsBinding.imageBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        adminMainNewsBinding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminMainNews.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
          document = firestore.collection(keyWord).document(type);
 
@@ -79,7 +122,11 @@ public class AdminMainNews extends AppCompatActivity {
                     }
 
                     if (adminNewsHelpers.size() >0){
-                        AdminNewsRecyclerAdapter adminNewsRecyclerAdapter = new AdminNewsRecyclerAdapter(adminNewsHelpers,AdminMainNews.this,keyWord,type);
+
+                        ArrayListSorter<AdminNewsHelper> newsClassArrayListSorter = new ArrayListSorter<>();
+                        ArrayList<AdminNewsHelper> adapterClasses = newsClassArrayListSorter.sortedArray(adminNewsHelpers);
+
+                        AdminNewsRecyclerAdapter adminNewsRecyclerAdapter = new AdminNewsRecyclerAdapter(adapterClasses,AdminMainNews.this,keyWord,type);
 
                         adminMainNewsBinding.newsAdminRecycle.setAdapter(adminNewsRecyclerAdapter);
                         adminMainNewsBinding.newsAdminRecycle.setLayoutManager(new LinearLayoutManager(AdminMainNews.this));

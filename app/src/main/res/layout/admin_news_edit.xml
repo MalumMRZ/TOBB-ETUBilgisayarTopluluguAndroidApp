@@ -5,6 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/holo_blue_bright"
+        android:backgroundTint="#82E1FF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="#82E1FF"
+            android:src="@drawable/back" />
+
+
+        <TextView
+            android:id="@+id/toolbarDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:text="ETKİNLİKLERİMİZ"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#82E1FF"
+            android:src="@drawable/home" />
+
+
+    </LinearLayout>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/adminNewsNameInput"
         android:layout_width="match_parent"
@@ -12,13 +61,15 @@
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/adminNewsName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="name" />
+            android:gravity="center"
+            android:hint="name"
+            android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -33,6 +84,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/adminNewsLink"
             android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:hint="link" />
     </com.google.android.material.textfield.TextInputLayout>

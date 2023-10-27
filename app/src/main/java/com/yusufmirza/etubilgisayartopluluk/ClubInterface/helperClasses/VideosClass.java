@@ -1,6 +1,10 @@
 package com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses;
 
-public class VideosClass {
+import com.yusufmirza.etubilgisayartopluluk.Helper;
+
+import java.io.Serializable;
+
+public class VideosClass implements Serializable, Helper {
 
     String name;
     String imageUri;

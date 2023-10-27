@@ -2,18 +2,20 @@ package com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses;
 
 
 
+import com.yusufmirza.etubilgisayartopluluk.Helper;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ActivityClass implements Serializable {
+public class ActivityClass implements Serializable, Helper {
 
   String imageUri;
 
-  ArrayList<String> imageList;
+
 
   String activityLink;
 
-  String activityName;
+  String name;
   String activityDate;
   String activityTime;
 
@@ -21,11 +23,10 @@ public class ActivityClass implements Serializable {
   String activitySpeaker;
 
 
-    public ActivityClass(String imageUri, ArrayList<String> imageList, String activityLink, String activityName, String activityDate, String activityTime, String activityPlace, String activitySpeaker) {
+    public ActivityClass(String imageUri, String activityLink, String name, String activityDate, String activityTime, String activityPlace, String activitySpeaker) {
         this.imageUri = imageUri;
-        this.imageList = imageList;
         this.activityLink = activityLink;
-        this.activityName = activityName;
+        this.name = name;
         this.activityDate = activityDate;
         this.activityTime = activityTime;
         this.activityPlace = activityPlace;
@@ -40,13 +41,7 @@ public class ActivityClass implements Serializable {
         this.imageUri = imageUri;
     }
 
-    public ArrayList<String> getImageList() {
-        return imageList;
-    }
 
-    public void setImageList(ArrayList<String> imageList) {
-        this.imageList = imageList;
-    }
 
     public String getActivityLink() {
         return activityLink;
@@ -56,12 +51,12 @@ public class ActivityClass implements Serializable {
         this.activityLink = activityLink;
     }
 
-    public String getActivityName() {
-        return activityName;
+    public String getName() {
+        return name;
     }
 
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
+    public void setName(String activityName) {
+        this.name = activityName;
     }
 
     public String getActivityDate() {

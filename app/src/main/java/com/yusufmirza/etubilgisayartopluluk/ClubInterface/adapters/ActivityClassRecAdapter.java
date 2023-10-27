@@ -1,11 +1,13 @@
 package com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,10 +50,16 @@ public class ActivityClassRecAdapter extends RecyclerView.Adapter<ActivityClassR
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(holder.itemView.getContext(), ActivityDetail.class);
-                intent.putExtra("detail",activityClass);
-                intent.putExtra("collect",keyword);
-                holder.itemView.getContext().startActivity(intent);
+
+                String url = activityClass.getActivityLink();
+
+                if (!url.equals("")) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    holder.itemView.getContext().startActivity(intent);
+                 } else {
+                    Toast.makeText(view.getContext(), "Bu etkinliğin linki yok", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -82,10 +90,10 @@ public class ActivityClassRecAdapter extends RecyclerView.Adapter<ActivityClassR
         }
 
         public  void insertData(ActivityClass activityClass) {
-
-            Picasso.get().load(activityClass.getImageUri()).fit().into(imageViewActivity);
-
-            actvName.setText(activityClass.getActivityName());
+            if (!activityClass.getImageUri().equals("")) {
+                Picasso.get().load(activityClass.getImageUri()).fit().into(imageViewActivity);
+            }
+            actvName.setText(activityClass.getName());
             actvSpeker.setText(activityClass.getActivitySpeaker());
             actvDate.setText(activityClass.getActivityDate());
             actvTime.setText(activityClass.getActivityTime());

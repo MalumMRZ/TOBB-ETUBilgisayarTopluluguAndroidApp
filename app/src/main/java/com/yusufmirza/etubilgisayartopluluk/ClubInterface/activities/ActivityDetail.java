@@ -22,6 +22,8 @@ import com.yusufmirza.etubilgisayartopluluk.R;
 
 public class ActivityDetail extends AppCompatActivity {
 
+    //BU SINIFIN İŞLEVLERİ ŞİMDİLİK KULLANILMAYACAK
+
     ImageButton imageBackButton,homeButton,imageButtonInstagram,imageButtonShare,imageButtonNotif;
     ImageView imageView;
     TextView toolbarDetailText;
@@ -51,9 +53,9 @@ public class ActivityDetail extends AppCompatActivity {
         keyWord = getIntent().getStringExtra("collect");
 
 
-        toolbarDetailText.setText(activityClass.getActivityName()); //Kısaltılmış isim kullan.
+        toolbarDetailText.setText(activityClass.getName()); //Kısaltılmış isim kullan.
 
-        Picasso.get().load(activityClass.getImageList().get(0)).fit().into(imageView);
+       // Picasso.get().load(activityClass.getImageList().get(0)).fit().into(imageView);
 
 
 
@@ -73,14 +75,14 @@ public class ActivityDetail extends AppCompatActivity {
                         float endX = event.getX();
                         if (endX > startX) {
                             // Kullanıcı sağa kaydırdı
-                            currentImageIndex = (currentImageIndex + 1) % activityClass.getImageList().size();
+                       //     currentImageIndex = (currentImageIndex + 1) % activityClass.getImageList().size();
                         } else if (endX < startX) {
                             // Kullanıcı sola kaydırdı
-                            currentImageIndex = (currentImageIndex - 1 + activityClass.getImageList().size()) % activityClass.getImageList().size();
+                    //        currentImageIndex = (currentImageIndex - 1 + activityClass.getImageList().size()) % activityClass.getImageList().size();
                         }
 
 
-                        Picasso.get().load(activityClass.getImageList().get(currentImageIndex)).fit().into(imageView);
+                    //    Picasso.get().load(activityClass.getImageList().get(currentImageIndex)).fit().into(imageView);
 
                         return true;
                 }

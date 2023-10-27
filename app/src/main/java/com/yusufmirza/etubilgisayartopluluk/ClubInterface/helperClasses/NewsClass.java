@@ -1,6 +1,10 @@
 package com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses;
 
-public class NewsClass {
+import com.yusufmirza.etubilgisayartopluluk.Helper;
+
+import java.io.Serializable;
+
+public class NewsClass implements Serializable, Helper {
 
     String link;
     String name;

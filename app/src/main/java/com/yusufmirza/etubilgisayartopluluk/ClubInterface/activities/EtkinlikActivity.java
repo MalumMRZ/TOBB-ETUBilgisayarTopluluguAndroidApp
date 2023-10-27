@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.yusufmirza.etubilgisayartopluluk.ArrayListSorter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.ActivityClassRecAdapter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.RecNewsViewAdapter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.ActivityClass;
@@ -96,12 +97,12 @@ public class EtkinlikActivity extends AppCompatActivity {
                             String name = (String) activityMap.get("name");
                             String date = (String) activityMap.get("date");
                             String imageUri = (String) activityMap.get("imageUri");
-                            String activityLink = (String) activityMap.get("activityLink");
+                            String activityLink = (String) activityMap.get("link");
 
 
-                            ArrayList<String> imageList = (ArrayList<String>) activityMap.get("imageList");
 
-                            ActivityClass activityClass = new ActivityClass(imageUri,imageList,activityLink,name,date,time,place,speaker);
+
+                            ActivityClass activityClass = new ActivityClass(imageUri,activityLink,name,date,time,place,speaker);
 
                             activityClasses.add(activityClass);
 
@@ -110,7 +111,11 @@ public class EtkinlikActivity extends AppCompatActivity {
                     }
 
                     if (activityClasses.size() >0){
-                        ActivityClassRecAdapter activityClassRecAdapter = new ActivityClassRecAdapter(activityClasses,keyWord);
+
+                        ArrayListSorter<ActivityClass> newsClassArrayListSorter = new ArrayListSorter<>();
+                        ArrayList<ActivityClass> adapterClasses = newsClassArrayListSorter.sortedArray(activityClasses);
+
+                        ActivityClassRecAdapter activityClassRecAdapter = new ActivityClassRecAdapter(adapterClasses,keyWord);
                         activityLayoutBinding.activityRecyclerView.setAdapter(activityClassRecAdapter);
                         activityLayoutBinding.activityRecyclerView.setLayoutManager(new LinearLayoutManager(EtkinlikActivity.this));
                     } else {

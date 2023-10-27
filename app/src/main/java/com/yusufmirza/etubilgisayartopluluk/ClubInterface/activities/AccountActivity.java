@@ -56,11 +56,11 @@ public class AccountActivity extends AppCompatActivity {
                 accountLayoutBinding = AccountLayoutBinding.inflate(getLayoutInflater());
                 setContentView(accountLayoutBinding.getRoot());
 
-                accountLayoutBinding.instagram.setText("tobb_yapayzeka_kulubu");
+                accountLayoutBinding.instagram.setText("tobbetumartificialintelligence");
                 accountLayoutBinding.linkedin.setText("TOBB ETU Yapay Zeka Kulübü");
                 accountLayoutBinding.medium.setText("TOBB ETU Yapay Zeka Kulübü");
 
-                setOnButtonListeners("https://www.instagram.com/tobb_yapayzeka_kulubu/","https://www.linkedin.com/company/tobb-etu-ai-club/?viewAsMember=true","https://medium.com/@tobb_yapayzeka_kulubu");
+                setOnButtonListeners("https://www.instagram.com/tobbetumartificialintelligence/","https://www.linkedin.com/company/tobb-etu-ai-club/?viewAsMember=true","https://medium.com/@tobb_yapayzeka_kulubu");
 
                 break;
 

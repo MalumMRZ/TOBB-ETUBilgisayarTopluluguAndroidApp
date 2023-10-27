@@ -25,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AdminAuth"/>
+        <activity android:name=".AdminAraPanel"/>
         <activity android:name=".ClubInterface.activities.AccountActivity"/>
         <activity android:name=".ClubInterface.activities.ActivityDetail"/>
         <activity android:name=".ClubInterface.activities.EtkinlikActivity"/>
@@ -36,6 +38,12 @@
         <activity android:name=".adminpanel.AdminClubActivities"/>
         <activity android:name=".adminpanel.newspanel.AdminMainNews"/>
         <activity android:name=".adminpanel.newspanel.AdminNewsEdit"/>
+        <activity android:name=".adminpanel.videospanel.AdminVideosEdit"/>
+        <activity android:name=".adminpanel.videospanel.AdminMainVideos"/>
+        <activity android:name=".adminpanel.memberspanel.AdminMainMembers"/>
+        <activity android:name=".adminpanel.memberspanel.AdminMembersEdit"/>
+        <activity android:name=".adminpanel.activitypanel.AdminMainActivity"/>
+        <activity android:name=".adminpanel.activitypanel.AdminActivityEdit"/>
     </application>
 
 </manifest>

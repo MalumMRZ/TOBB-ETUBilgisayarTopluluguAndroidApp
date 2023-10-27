@@ -14,7 +14,8 @@
         android:layout_width="125dp"
         android:layout_margin="10dp"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/cyber" />
+        android:src="@mipmap/real_icon_round"
+         />
 
 
 

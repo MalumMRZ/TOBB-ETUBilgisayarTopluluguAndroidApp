@@ -17,8 +17,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.yusufmirza.etubilgisayartopluluk.ArrayListSorter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.MemberAdapterRecyclerView;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.VideosRecyclerAdapter;
+import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.NewsClass;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.VideosClass;
 import com.yusufmirza.etubilgisayartopluluk.HelperClasses.Member;
 import com.yusufmirza.etubilgisayartopluluk.MainActivity;
@@ -96,7 +98,11 @@ public class VideosActivity extends AppCompatActivity {
 
 
                     if (videos.size()>0){
-                        videoLayoutBinding.videoRecyclerView.setAdapter(new VideosRecyclerAdapter(videos));
+                        ArrayListSorter<VideosClass> newsClassArrayListSorter = new ArrayListSorter<>();
+                        ArrayList<VideosClass> adapterClasses = newsClassArrayListSorter.sortedArray(videos);
+
+
+                        videoLayoutBinding.videoRecyclerView.setAdapter(new VideosRecyclerAdapter(adapterClasses));
                         videoLayoutBinding.videoRecyclerView.setLayoutManager(new LinearLayoutManager(VideosActivity.this));
                     } else {
                         Toast.makeText(VideosActivity.this, "Bu topluluk henüz video yayınlamamış", Toast.LENGTH_SHORT).show();

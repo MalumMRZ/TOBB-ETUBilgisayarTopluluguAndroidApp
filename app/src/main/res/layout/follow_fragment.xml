@@ -35,7 +35,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/my_shape_wordpress"
-        android:drawableStart="@drawable/wordpress"
+        android:drawableStart="@drawable/telegram"
         android:paddingStart="35dp"
         android:paddingRight="0dp"
         android:text="TOBB ETU CS COMMUNITY - RESOURCES"

@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.yusufmirza.etubilgisayartopluluk.ArrayListSorter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.adapters.RecNewsViewAdapter;
 import com.yusufmirza.etubilgisayartopluluk.ClubInterface.helperClasses.NewsClass;
 import com.yusufmirza.etubilgisayartopluluk.HelperClasses.Member;
@@ -72,7 +74,8 @@ public class NewsActivity extends AppCompatActivity {
          DocumentReference documentReference = firestore.collection(keyWord).document("news");
 
 
-         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+         documentReference.
+                 get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
              @Override
              public void onSuccess(DocumentSnapshot documentSnapshot) {
 
@@ -99,7 +102,11 @@ public class NewsActivity extends AppCompatActivity {
                      }
 
                      if (newsClasses.size() >0){
-                         RecNewsViewAdapter recNewsViewAdapter = new RecNewsViewAdapter(newsClasses);
+                         ArrayListSorter<NewsClass> newsClassArrayListSorter = new ArrayListSorter<>();
+                         ArrayList<NewsClass> adapterClasses = newsClassArrayListSorter.sortedArray(newsClasses);
+
+
+                         RecNewsViewAdapter recNewsViewAdapter = new RecNewsViewAdapter(adapterClasses);
 
                          newsLayoutBinding.newsRecyclerView.setAdapter(recNewsViewAdapter);
                          newsLayoutBinding.newsRecyclerView.setLayoutManager(new LinearLayoutManager(NewsActivity.this));

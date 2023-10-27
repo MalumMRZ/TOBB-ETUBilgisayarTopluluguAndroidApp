@@ -46,7 +46,7 @@ public class MainFragment extends Fragment {
         mainFragmentBinding.website.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://linktr.ee/tobbbilgisayartoplulugu";
+                String url = "https://tobbetu-bilgisayar-toplulugu.streamlit.app/";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);

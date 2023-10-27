@@ -1,27 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="206dp"
     android:background="#FE00A1"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
     <!-- margine benzer bir şekilde görünüş sağlar -->
     <!-- ThemOverlay TextViewin uzerine tema bindirip özelliklerinin ona taşınmasını sağlar bence gereksiz -->
 
 
     <TextView
+        android:id="@+id/yourEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Yusuf Mirza Çoban"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Emailiniz : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/developerEmail" />
 
     <TextView
+        android:id="@+id/yourVerification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="32dp"
-        android:text="yusufmrz111@gmail.com" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text=" Doğrulama : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourEmail" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/developerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:text=" Geliştirici : Yusuf Mirza Çoban"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/developerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text=" Email : yusufmrz111@gmail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/developerName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
